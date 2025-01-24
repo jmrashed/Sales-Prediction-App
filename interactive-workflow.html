@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Workflow</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #mermaid-diagram {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+        body{
+            width: 100%;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sub-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="mermaid-diagram">
+        <h1 class="title">Sales Prediction App</h1>
+        <p class="sub-title">Interactive Workflow for Sales Prediction Applications for Business Applications</p>
+        <p class="text">Below is the interactive workflow for building a sales prediction app using Shopify's API and OpenAI's Language Model (LLM).</p>
+        <p class="text">Each step in the workflow represents a task or a set of tasks that need to be completed to build the app.</p>
+        <p class="text">Click and drag the nodes to rearrange the workflow diagram.</p>
+        <pre class="mermaid">
+            graph TD
+                A[Project Setup]
+                B[Authentication and Shopify API Setup]
+                C[Data Preprocessing]
+                D[LLM Integration]
+                E[Visualization and UI]
+                F[Deployment]
+
+                A --> A1[Install Shopify CLI and Tools]
+                A --> A2[Initialize Shopify App]
+                A --> A3[Install Dependencies]
+
+                B --> B1[Set Up OAuth Authentication]
+                B --> B2[Fetch Store Data via Admin API]
+
+                C --> C1[Extract Key Features from Sales Data]
+                C --> C2[Normalize and Clean Data]
+                C --> C3[Aggregate Data by Time Periods]
+
+                D --> D1[Set Up OpenAI API]
+                D --> D2[Craft Structured Prompt for LLM]
+                D --> D3[Generate Predictions with LLM]
+
+                E --> E1[Build UI with React and Polaris]
+                E --> E2[Integrate Visualizations Chart.js/D3.js]
+                E --> E3[Display Predictions and Insights]
+
+                F --> F1[Host App on AWS/Heroku]
+                F --> F2[Test and Debug App]
+                F --> F3[Submit App to Shopify App Store]
+
+                A --> B --> C --> D --> E --> F
+        </pre>
+    </div>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
